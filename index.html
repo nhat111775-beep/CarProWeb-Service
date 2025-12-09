@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCity Master - Siêu Thị Phụ Tùng & Spa Xe Hơi 4.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar glass-effect">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-car-burst"></i> AutoCity<span class="highlight">Master</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Trang Chủ</a></li>
+                <li><a href="#products">Sản Phẩm</a></li>
+                <li><a href="#services">Dịch Vụ Spa</a></li>
+                <li><a href="#about">Về Chúng Tôi</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+            <div class="nav-auth">
+                <button class="btn btn-outline" id="loginBtn"><i class="fa-regular fa-user"></i> Đăng Nhập (B2B)</button>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge">0</span>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <div class="hero-text">
+                <span class="hero-badge">Kho Hàng Số 1 Thành Phố</span>
+                <h1>Siêu Thị Phụ Tùng &<br> <span class="gradient-text">Spa Xe Hơi 4.0</span></h1>
+                <p>Nguồn hàng chuẩn hãng - Giá gốc tận kho - Dịch vụ đỉnh cao</p>
+                
+                <!-- Smart Search Bar -->
+                <div class="smart-search-box glass-effect">
+                    <div class="search-tabs">
+                        <button class="search-tab active" data-type="parts">Tìm Phụ Tùng</button>
+                        <button class="search-tab" data-type="vin">Tra Cứu VIN</button>
+                    </div>
+                    <div class="search-inputs">
+                        <div class="input-group">
+                            <i class="fa-solid fa-car"></i>
+                            <select id="make">
+                                <option value="">Chọn Hãng Xe</option>
+                                <option>Toyota</option>
+                                <option>Mercedes</option>
+                                <option>VinFast (EV)</option>
+                                <option>Ford</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <i class="fa-solid fa-calendar"></i>
+                            <select id="model">
+                                <option value="">Đời Xe</option>
+                                <option>2024</option>
+                                <option>2023</option>
+                                <option>2022</option>
+                                <option>2021</option>
+                            </select>
+                        </div>
+                        <div class="input-group search-btn-group">
+                            <button class="btn btn-primary glow-effect">
+                                <i class="fa-solid fa-magnifying-glass"></i> Tìm Kiếm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Section -->
+    <section class="categories-section container">
+        <div class="section-header">
+            <h2>Phân Khu Chuyên Biệt</h2>
+            <div class="line"></div>
+        </div>
+        <div class="category-grid">
+            <div class="category-card ev-card">
+                <div class="card-bg"></div>
+                <div class="card-content">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Phụ Tùng Xe Điện (EV)</h3>
+                    <p>Pin, Sạc, Motor điện, Phần mềm</p>
+                    <a href="#" class="link-arrow">Khám phá <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card traditional-card">
+                <div class="card-bg"></div>
+                <div class="card-content">
+                    <i class="fa-solid fa-gears"></i>
+                    <h3>Xe Truyền Thống</h3>
+                    <p>Động cơ, Dầu nhớt, Hệ thống treo, Phanh</p>
+                    <a href="#" class="link-arrow">khám phá <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Bán Chạy Tuần Này</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="product-grid" id="productGrid">
+                <!-- Product Items injected via JS or static -->
+                <div class="product-card glass-effect">
+                    <div class="product-badge">Hot</div>
+                    <div class="product-img">
+                        <!-- Placeholder for Battery -->
+                        <div class="placeholder-img battery-img">
+                            <i class="fa-solid fa-car-battery" style="font-size: 3rem; color: #00f2fe;"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pin Lithium-ion VinFast VF8</h3>
+                        <p class="sku">Mã: VF-BAT-001</p>
+                        <div class="price-box">
+                            <div class="retail-price">
+                                <span>Giá lẻ:</span>
+                                <strong>185.000.000₫</strong>
+                            </div>
+                            <div class="wholesale-price blur-text" title="Đăng nhập để xem giá sỉ">
+                                <span>Giá sỉ:</span>
+                                <strong>***.***.***₫</strong>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card glass-effect">
+                    <div class="product-img">
+                        <div class="placeholder-img tire-img">
+                            <i class="fa-solid fa-dharmachakra" style="font-size: 3rem; color: #ff8c00;"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Lốp Michelin Pilot Sport 5</h3>
+                        <p class="sku">Mã: MC-245/45R18</p>
+                        <div class="price-box">
+                            <div class="retail-price">
+                                <span>Giá lẻ:</span>
+                                <strong>4.200.000₫</strong>
+                            </div>
+                            <div class="wholesale-price blur-text">
+                                <span>Giá sỉ:</span>
+                                <strong>***.***.***₫</strong>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+
+                <div class="product-card glass-effect">
+                    <div class="product-badge">New</div>
+                    <div class="product-img">
+                         <div class="placeholder-img oil-img">
+                            <i class="fa-solid fa-oil-can" style="font-size: 3rem; color: #ffd700;"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Dầu Nhớt Castrol Edge 5W-30</h3>
+                        <p class="sku">Mã: CAS-5W30-4L</p>
+                        <div class="price-box">
+                            <div class="retail-price">
+                                <span>Giá lẻ:</span>
+                                <strong>1.150.000₫</strong>
+                            </div>
+                            <div class="wholesale-price blur-text">
+                                <span>Giá sỉ:</span>
+                                <strong>***.***.***₫</strong>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                
+                <div class="product-card glass-effect">
+                    <div class="product-img">
+                         <div class="placeholder-img spark-img">
+                            <i class="fa-solid fa-bolt-lightning" style="font-size: 3rem; color: #cccccc;"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bugi Iridium NGK Laser</h3>
+                        <p class="sku">Mã: NGK-lLKAR7B11</p>
+                        <div class="price-box">
+                            <div class="retail-price">
+                                <span>Giá lẻ:</span>
+                                <strong>320.000₫</strong>
+                            </div>
+                            <div class="wholesale-price blur-text">
+                                <span>Giá sỉ:</span>
+                                <strong>***.***.***₫</strong>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="services" class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper glass-effect">
+                <div class="booking-content">
+                    <h2>Đặt Lịch Spa & Độ Xe Chuyên Nghiệp</h2>
+                    <p>Cam kết thời gian hoàn thành chuẩn xác. Đội ngũ kỹ thuật viên tay nghề cao.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Rửa xe công nghệ cao & Detailing</li>
+                        <li><i class="fa-solid fa-check"></i> Phủ Ceramic & Dán phim cách nhiệt</li>
+                        <li><i class="fa-solid fa-check"></i> Độ đèn, âm thanh, nâng cấp phần mềm</li>
+                    </ul>
+                </div>
+                <div class="booking-form">
+                    <h3>Đặt Lịch Ngay</h3>
+                    <form onsubmit="event.preventDefault(); alert('Cảm ơn! Chúng tôi sẽ liên hệ xác nhận trong 5 phút.');">
+                        <input type="text" placeholder="Họ và tên" required>
+                        <input type="tel" placeholder="Số điện thoại" required>
+                        <select>
+                            <option>Chọn Dịch Vụ</option>
+                            <option>Gói Spa Cơ Bản (45p)</option>
+                            <option>Gói Spa Cao Cấp (2h)</option>
+                            <option>Độ Đèn (1/2 ngày)</option>
+                            <option>Bảo Dưỡng Nhanh</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary full-width">Xác Nhận Đặt Lịch</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section (AI Content) -->
+    <section id="about" class="about-section container">
+        <div class="about-content glass-effect">
+            <div class="section-header">
+                <h2>Về Chúng Tôi</h2>
+                <div class="line"></div>
+            </div>
+            <div class="ai-text-content">
+                <p>
+                    <strong>AutoCity Master</strong> tự hào khẳng định vị thế là trạm cung ứng phụ tùng và tổ hợp Spa xe hơi <strong>số 1 thành phố</strong>. Chúng tôi không đơn thuần là một siêu thị, mà là trái tim của hệ sinh thái ô tô khu vực, nơi quy chuẩn chất lượng gặp gỡ tốc độ phục vụ tối thượng.
+                </p>
+                <p>
+                    Với kho hàng quy mô chiến lược, chúng tôi nắm giữ năng lực cung ứng vô song: từ những chi tiết vi mô như <em>con ốc vít xe tải hạng nặng</em> bền bỉ trước thời gian, đến những khối <em>pin xe điện đời mới</em> chứa đựng công nghệ tiên phong. Dải sản phẩm của chúng tôi bao phủ 100% thị trường, xóa nhòa lằn ranh giữa xe truyền thống và xe tương lai.
+                </p>
+                <p>
+                    Chúng tôi mang đến sự an tâm tuyệt đối cho các đối tác Gara tìm kiếm nguồn hàng gốc, và sự thỏa mãn đẳng cấp cho những chủ xe sành điệu. Tại AutoCity Master, quy mô đồng nghĩa với uy tín. Chúng tôi ở đây để vận hành niềm đam mê tốc độ của bạn.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>AutoCity Master</h3>
+                <p>Hệ thống siêu thị phụ tùng & chăm sóc xe hơi hàng đầu.</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Liên Kết</h3>
+                <ul>
+                    <li><a href="#">Tra cứu đơn hàng</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Đăng ký đại lý (B2B)</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Liên Hệ</h3>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Đại Lộ Tốc Độ, Q. Công Nghệ</p>
+                <p><i class="fa-solid fa-phone"></i> 1900 888 888</p>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2024 AutoCity Master. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
